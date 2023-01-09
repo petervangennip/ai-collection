@@ -245,3 +245,49 @@ export default {
 #npm run test
 npm run pre-commit
 ```
+
+## TailwindCSS
+
+- install: `npm i -D tailwindcss postcss autoprefixer postcss-import`
+- run: `npx tailwindcss init`
+- create a `./assets/css/main.css` file:
+
+```css
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+```
+
+- add to `nuxt.config.ts`:
+
+```javascript
+export default defineNuxtConfig({
+  css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      'postcss-import': {},
+      'tailwindcss/nesting': {},
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+});
+```
+
+- add content to the `tailwind.config.js` file in the root:
+
+```javascript
+module.exports = {
+  content: [
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './nuxt.config.{js,ts}',
+    './app.vue',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
