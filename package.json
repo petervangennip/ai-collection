@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "node-version": "node ./scripts/switch-node-version.js",
+    "createssl": "node ./scripts/create-ssl.js",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --ignore-path .gitignore",
+    "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "build": "nuxt build",
+    "dev": "nuxt dev --https --ssl-cert ./.ssl/localhost.pem --ssl-key ./.ssl/localhost-key.pem"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.31.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "eslint-plugin-vuejs-accessibility": "^2.0.0",
+    "nuxt": "3.0.0",
+    "prettier": "^2.8.2"
+  }
+}
