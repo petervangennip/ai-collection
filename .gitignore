@@ -7,3 +7,6 @@ node_modules
 .env
 .ssl
 dist
+*.favorites.json
+.favorites.json
+*.pem
