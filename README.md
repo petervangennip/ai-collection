@@ -51,6 +51,24 @@ NODE_TLS_REJECT_UNAUTHORIZED=0
 - select the `RootCA.pem` file and click OK. Then check both checkboxes and click OK
 - restart Firefox (and possibly your dev server) and the site should now be secure in Firefox as well
 
-## Linting
+## Initial
 
-- now, run ```npm run lint:fix```
+- when all of the above is done, run `npm run lint:fix` to initially fix possible linting issues
+
+## Tasks
+
+### Development
+
+To start the development server and load the front-end:
+
+```bash
+npm run dev
+```
+
+### Build
+
+To start load the front-end:
+
+```bash
+npm run build
+```

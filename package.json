@@ -4,14 +4,14 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "prepare": "husky install",
     "node-version": "node ./scripts/switch-node-version.js",
     "createssl": "node ./scripts/create-ssl.js",
     "pre-commit": "lint-staged",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --ignore-path .gitignore",
     "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "build": "nuxt build",
-    "dev": "nuxt dev --https --ssl-cert ./.ssl/localhost.pem --ssl-key ./.ssl/localhost-key.pem",
-    "prepare": "husky install"
+    "dev": "nuxt dev --https --ssl-cert ./.ssl/localhost.pem --ssl-key ./.ssl/localhost-key.pem"
   },
   "lint-staged": {
     "**/*.{js,ts,vue,html,md,json,css}": [
